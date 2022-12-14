@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#outputs hello world 
+
+echo "Hello to you  world"
+
