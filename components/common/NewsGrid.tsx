@@ -1,8 +1,7 @@
 import {  NewsArticle } from "@/models/NewsArticle";
 import NewsCard from "./NewsCard";
-
-export interface NewsGridProps {
-    articles : NewsArticle[]
+interface NewsGridProps {
+  articles : NewsArticle[]
 }
 
 export default  function NewsGrid({articles}:NewsGridProps) {

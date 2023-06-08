@@ -11,15 +11,18 @@ interface SearchProp {
 
 
 export default function Search() {
-  
+  async function action(data:FormData){
+    const query = data.get('query');
+    
+  }
   
   
 
   return (
     <div className="w-full mt-5">
-      <form action={''}>
+      <form action={action}>
         <Input
-        id="inputText"
+        name="query"
         placeholder="E.g. sports, business, health ..."
         className="w-full px-2 sm:max-w-lg lg:max-w-5xl my-2 bg-white
         duration-300 ease-in "
