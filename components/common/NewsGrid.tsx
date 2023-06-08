@@ -1,6 +1,5 @@
-import {  NewsArticle, NewsResponse } from "@/models/NewsArticle";
+import {  NewsArticle } from "@/models/NewsArticle";
 import NewsCard from "./NewsCard";
-import { NextPage } from "next";
 
 export interface NewsGridProps {
     articles : NewsArticle[]

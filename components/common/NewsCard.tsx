@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from "../ui/card";
 import { NewsArticle } from "@/models/NewsArticle";
 import Link from "next/link";
