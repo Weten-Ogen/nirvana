@@ -1,13 +1,12 @@
 import NewsGrid from "@/components/common/NewsGrid"
 import { NewsArticle, NewsResponse } from "@/models/NewsArticle"
-import axios from 'axios'
-
 export  default async function Home() {
 
   const url= await `https://newsapi.org/v2/top-headlines?country=us&apikey=${process.env.Api_key}`
   
-  const response:NewsArticle[] = await axios.get(url).then(response => response.data.articles)
-  
+  const response = await fetch(url)
+  const newResponse:NewsArticle[] = await response.json()
+
  
 
   return (
@@ -16,7 +15,7 @@ export  default async function Home() {
      className=" font-bold text-red-600  capitalize text-3xl  tracking-wide ">
       breaking news
       </h1>
-     <NewsGrid articles={response}/>
+     <NewsGrid articles={newResponse}/>
      </main>
   )
 }
