@@ -6,7 +6,7 @@ export  default async function Home() {
 
   const url= await `https://newsapi.org/v2/top-headlines?country=us&apikey=${process.env.Api_key}`
   
-  const response:NewsResponse[] = await axios.get(url).then(response => response.data.articles)
+  const response:NewsResponse = await axios.get(url).then(response => response.data.articles)
   
  
 

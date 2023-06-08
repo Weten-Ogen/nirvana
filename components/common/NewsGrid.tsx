@@ -3,10 +3,10 @@ import NewsCard from "./NewsCard";
 import { NextPage } from "next";
 
 export interface NewsGridProps {
-    data : NewsArticle[]
+    articles : NewsArticle[]
 }
 
-export default  function NewsGrid({articles}:NewsResponse) {
+export default  function NewsGrid({articles}:NewsGridProps) {
     
   
   return (

@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NewsArticle } from "@/models/NewsArticle";
 import { FormEvent, useState } from "react";
-import NewsGrid from "@/components/common/NewsGrid";
 import NewsCard from "@/components/common/NewsCard";
 
 export default function Search() {
