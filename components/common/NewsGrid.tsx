@@ -1,4 +1,4 @@
-import { NewsArticle, NewsResponse } from "@/models/NewsArticle";
+import {  NewsArticle, NewsResponse } from "@/models/NewsArticle";
 import NewsCard from "./NewsCard";
 import { NextPage } from "next";
 
