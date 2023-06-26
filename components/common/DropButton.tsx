@@ -15,37 +15,37 @@ export default function DropButton() {
             </DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-gray-600"/>
             <DropdownMenuGroup>
-                <Link href='/categories/business'>
+                <Link href='/category/business'>
                 <DropdownMenuItem>
                     Business
                 </DropdownMenuItem>
                 </Link>
-                <Link href="/categories/general">
+                <Link href="/category/general">
                 <DropdownMenuItem>
                     General
                 </DropdownMenuItem>
                 </Link>
-                <Link href="/categories/sports">
+                <Link href="/category/sports">
                 <DropdownMenuItem>
                     Sports
                 </DropdownMenuItem>
                 </Link>
-                <Link href="/categories/health">
+                <Link href="/category/health">
                 <DropdownMenuItem>
                     Health
                 </DropdownMenuItem>
                 </Link>
-                <Link href="/categories/entertainment">
+                <Link href="/category/entertainment">
                 <DropdownMenuItem>
                     Entertainment
                 </DropdownMenuItem>
                 </Link>
-                <Link href="/categories/politics">
+                <Link href="/category/politics">
                 <DropdownMenuItem>
                     Politics
                 </DropdownMenuItem>
                 </Link>
-                <Link href="/categories/technology">
+                <Link href="/category/technology">
                 <DropdownMenuItem>
                     Technology
                 </DropdownMenuItem>
