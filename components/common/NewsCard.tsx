@@ -1,6 +1,6 @@
 "use client"
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from "../ui/card";
-import { NewsArticle } from "@/models/NewsArticle";
+import { NewsArticle } from "@/types/NewsArticle";
 import Link from "next/link";
 
 

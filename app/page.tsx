@@ -1,5 +1,5 @@
 import NewsGrid from "@/components/common/NewsGrid"
-import { NewsArticle, NewsResponse } from "@/models/NewsArticle"
+import { NewsArticle, NewsResponse } from "@/types/NewsArticle"
 export  default async function Home() {
 
   const url= await `https://newsapi.org/v2/top-headlines?country=us&apikey=${process.env.Api_key}`

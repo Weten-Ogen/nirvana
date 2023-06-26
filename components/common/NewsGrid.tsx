@@ -1,4 +1,4 @@
-import {  NewsArticle } from "@/models/NewsArticle";
+import {  NewsArticle } from "@/types/NewsArticle";
 import NewsCard from "./NewsCard";
 interface NewsGridProps {
   articles : NewsArticle[]
