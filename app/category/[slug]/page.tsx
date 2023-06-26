@@ -12,7 +12,8 @@ export default async function Page({params}:any) {
     const response: NewsArticle[] =await fetch(url).then(res => res.json()).then(res => res.articles);
     console.log(response)
   return (
-    <div>
+    <div> 
+        <h2 className='text-center text-red-600 font-bold text-xl pb-5'>{slug}</h2>
         <NewsGrid articles={response}/>
     </div>
   )
