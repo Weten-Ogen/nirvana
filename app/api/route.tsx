@@ -1,4 +1,4 @@
-import { NewsResponse } from "@/models/NewsArticle";
+import { NewsResponse } from "@/types/NewsArticle";
 import { NextRequest, NextResponse } from "next/server";
 
 
