@@ -13,7 +13,7 @@ export default async function Page({params}:any) {
     console.log(response)
   return (
     <div> 
-        <h2 className='text-center text-red-600 font-bold text-xl pb-5 mt-20'>{slug}</h2>
+        <h2 className='text-center text-red-600 font-bold text-xl pb-5 uppercase underline underline-offset-2'>{slug}</h2>
         <NewsGrid articles={response}/>
     </div>
   )
