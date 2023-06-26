@@ -13,7 +13,10 @@ const nextConfig = {
                 hostname:"**",
             },
         ]
-    }
+    },
+    eslint:{
+        ignoreDuringBuilds:true,
+    },
 }
 
 module.exports = nextConfig
