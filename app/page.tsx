@@ -1,24 +1,21 @@
-import NewsGrid from "@/components/common/NewsGrid"
-import { NewsArticle, NewsResponse } from "@/types/NewsArticle"
-export  default async function Home() {
+import NewsGrid from "@/components/layouts/NewsGrid";
+import { Label } from "@/components/ui/label";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Suspense } from "react";
+import axios from 'axios'
 
-  const url= await `https://newsapi.org/v2/top-headlines?country=us&apikey=${process.env.Api_key}`
-  
-  const response = await fetch(url)
-  const newResponse :NewsArticle[]= await response.json().then(response => response.articles )
-  
-  
- 
+export default async function Home() {
 
- 
+    const res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=653af5b4e1eb40e4930409758a9ae01e')
+    const data =  await res.data
 
   return (
     <main className="">
-     <h1 
-     className=" font-bold text-red-600  capitalize text-3xl  tracking-wide ">
-      breaking news
-      </h1>
-     <NewsGrid articles={newResponse}/>
-     </main>
+      <Suspense fallback={<Skeleton>loading..</Skeleton>}>
+        {data ? 
+        <NewsGrid articles={data.articles}/>
+        : <p>An error occured while fetching Data</p>}
+      </Suspense>
+    </main>
   )
 }

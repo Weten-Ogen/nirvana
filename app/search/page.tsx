@@ -1,7 +1,9 @@
-import React from 'react'
+import SearchForm from "@/components/client/SearchForm"
 
-export default function Page() {
+export default function SearchPage() {
   return (
-    <div>Page</div>
+    <div>
+       <SearchForm/>
+    </div>
   )
 }

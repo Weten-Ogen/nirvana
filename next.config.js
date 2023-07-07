@@ -1,22 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode:true,
-    images:{
-        domains:["www.si.com"],
+    images:{ 
         remotePatterns:[
             {
                 protocol:"https",
                 hostname:"**",
+                pathname:"**",
+                port : ''
             },
             {
                 protocol:"http",
                 hostname:"**",
-            },
-        ]
-    },
-    eslint:{
-        ignoreDuringBuilds:true,
-    },
+                pathname:"**"
+            }
+        ],
+    }
 }
 
 module.exports = nextConfig
