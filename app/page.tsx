@@ -1,5 +1,4 @@
 import NewsGrid from "@/components/layouts/NewsGrid";
-import { Label } from "@/components/ui/label";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Suspense } from "react";
 import axios from 'axios'
