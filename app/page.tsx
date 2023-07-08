@@ -3,9 +3,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Suspense } from "react";
 import axios from 'axios'
 
-export default async function Home() {
+export default async function Home(){
 
-    const res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=653af5b4e1eb40e4930409758a9ae01e')
+    const res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=' + process.env.API_KEY)
     const data =  await res.data
 
   return (

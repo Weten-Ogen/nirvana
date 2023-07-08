@@ -32,10 +32,8 @@ export default function NewsCard({title,url,author,urlToImage,description}:NewsA
 
         <Card className="shadow-xl  object-contain ">
             <CardHeader>
-            <CardTitle>
-                <Suspense fallback={<CardSkeleton/>}>
+            <CardTitle className="text-xl">
                     {title}
-                </Suspense>
             </CardTitle>
             <CardDescription className="my-2">
                 {descript ? descript + "...": "No description here, go  to the official site to see more ..."}
@@ -58,7 +56,7 @@ export default function NewsCard({title,url,author,urlToImage,description}:NewsA
                 </AspectRatio>
             </CardContent>
            <CardFooter className="flex flex-col gap-2">
-           <h2 className="text-xl">Author :
+           <h2 className="text-lg">Author :
             <span className={authorStyles}> {authorlist ? author : "unknown"}</span>
             </h2>
            </CardFooter>
