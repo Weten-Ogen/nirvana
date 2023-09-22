@@ -7,6 +7,7 @@ export default async function Home(){
 
     const res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=' + process.env.API_KEY)
     const data =  await res.data
+   
 
   return (
     <main className="">
