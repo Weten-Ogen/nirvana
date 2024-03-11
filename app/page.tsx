@@ -7,13 +7,14 @@ import SignX from "@/components/custom/signx";
 export default async function Home() {
   return (
    <section className="">
-    <RandomMovie className="absolute inset-0 -z-[1]  w-full h-screen overflow-hidden bg-black/90">
+    <RandomMovie className="absolute inset-0 z-[-2]  w-full h-screen overflow-hidden ">
       <div className="flex flex-col text-white p-12  justify-center items-center  max-w-lg my-5 mx-auto ">
           <p className="text-lg capitalize font-bold ">Welcome to the nirvana movie application</p>
           <p className="py-4 capitalize   text-lg tracking-wider text-gray-200">we  feed you with updates about new movies, popular ones and the horrors of the screen you might want to watch</p>
-          <SignX className="text-lg uppercase font-bold">get started</SignX>
+          <SignX className="text-lg uppercase font-bold text-black">get started</SignX>
       </div>
     </RandomMovie>
+    <div className="absolute inset-0  bg-black/80 z-[-1]"/>
    </section>
   );
 }

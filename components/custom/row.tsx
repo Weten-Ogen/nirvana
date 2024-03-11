@@ -3,6 +3,7 @@ import { fetchRequested, movieProps } from '@/lib/request';
 import React, { Suspense } from 'react';
 import RowItem from './rowitem';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 interface rowProps{
     title: string,
@@ -10,20 +11,21 @@ interface rowProps{
     rowId: string
 }
 export default  function Row({title,fetchurl,rowId}:rowProps) {
+
     const [data, setData] = React.useState<[] |movieProps[]>([]);
     const [loading, setLoading] = React.useState(false);
     
-
     const fetchdata = async() => {
         setLoading(prev => !prev);
         const mock = await fetchRequested(fetchurl)
         setLoading(prev=>!prev);
         setData(prev => mock)
     };
-
+    
     React.useEffect(() => {
         fetchdata()
     },[]);
+    
 
     const slideLeft = () => {
         var slider:HTMLElement |null  = document.querySelector('#slider' + rowId);
@@ -54,11 +56,14 @@ export default  function Row({title,fetchurl,rowId}:rowProps) {
             />
                 <div id={'slider' + rowId} className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide '>
                     {data.map((item:movieProps)=> {
-                        return (<RowItem
+                        return (
+                        <Link href={'movies/'+item.id}>
+                        <RowItem
                             className=''
                             props={item} 
                         key={item.id}
-                        />)
+                        />
+                        </Link>)
                     })}
                 </div>
             <ChevronRight

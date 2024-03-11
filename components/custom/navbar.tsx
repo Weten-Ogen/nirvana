@@ -6,13 +6,14 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import AvaTar from './avaatar';
 
+
 export default async function NavBar() {
     const session
      = await getServerSession(authOptions);
 
      return (
     <section 
-    className="flex items-center justify-between px-1 py-2 md:px-8 md:py-4 ">
+    className="flex items-center justify-between px-1 py-2 md:px-8 md:py-4  z-[23px] ">
         {/* logo */}
         <div className=" tracking-wide md:tracking-wider uppercase font-bold">
             <NavLink 
@@ -36,9 +37,9 @@ export default async function NavBar() {
                 movies 
             </NavLink>
             <NavLink 
-            name='/' 
+            name='/settings' 
             className='navlinks'>
-                favorites
+                settings
             </NavLink>
         </div>
 
